@@ -5,6 +5,8 @@
  */
 
 let fruits = ["apple", "banana", "orange", "kiwi"];
+ჼ
+//განვაზოგადოთ ყველანაირ მიმდევრობაზე
 fruits.splice(fruits.indexOf("banana"), 1);
 
 fruits.splice(fruits.indexOf("orange"), 0, "mango");
