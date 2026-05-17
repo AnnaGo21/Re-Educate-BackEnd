@@ -8,3 +8,6 @@ const movies = [
   { title: "Joker", rating: 8.2 },
   { title: "Tenet", rating: 6.9 },
 ];
+
+movies.sort((a, b) => a.rating - b.rating);
+console.log(movies);

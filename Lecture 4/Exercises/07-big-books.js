@@ -8,3 +8,6 @@ const books = [
   { title: "Lord of the Rings", pages: 700 },
   { title: "Animal Farm", pages: 250 },
 ];
+
+let bigBooks = books.filter((book) => book.pages > 300);
+console.log(bigBooks);

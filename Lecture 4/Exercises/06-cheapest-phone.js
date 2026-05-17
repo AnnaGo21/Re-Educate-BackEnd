@@ -8,3 +8,8 @@ const phones = [
   { model: "Xiaomi Redmi 13", price: 250 },
   { model: "Pixel 8", price: 800 },
 ];
+
+let cheapestPhone = phones.reduce((acc, cur) => {
+  return cur.price < acc.price ? cur : acc;
+});
+console.log(cheapestPhone.model);

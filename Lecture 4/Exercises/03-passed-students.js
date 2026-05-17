@@ -8,3 +8,8 @@ const students = [
   { name: "Mariam", score: 92, passed: true },
   { name: "Luka", score: 60, passed: false },
 ];
+
+let passedStudents = students
+  .filter((student) => student.passed)
+  .map((student) => student.name);
+console.log(passedStudents);

@@ -9,3 +9,8 @@ const products = [
   { title: "Ruler", price: 3 },
   { title: "Calculator", price: 40 },
 ];
+
+let cheapProducts = products
+  .filter((product) => product.price < 10)
+  .map((product) => product.title);
+console.log(cheapProducts);
