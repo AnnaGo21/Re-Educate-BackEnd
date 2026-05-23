@@ -1,0 +1,79 @@
+// function greeting(name, phrase) {
+//   console.log(`Hello ${name}`);
+//   callBack();
+// }
+
+// function callBack() {
+//   console.log("Nice to meet you");
+// }
+
+// greeting("Ana", callBack);
+
+// სინქრონულობა - ანუ დაელოდება სანამ ეს უზარმაზარი for ციკლი არ შესრულდება და მერე დაბეჭდავს hello-ს
+// console.time();
+
+// for (let i = 0; i < 10000000000; i++) {}
+// console.timeEnd();
+// console.log("Hello");
+
+// ასინქრონულობა - არ დაელოდება, ვინაიდან ხედავს რომ არსებობს რაღაც თასქი (სინქრონული თასქი),
+// რომლის შესრულებაც პარალელურ რეჟიმში შეუძლია, არ დალოდება იმ 5 წამს და პარალელურ რეჟიმში დააკონსოლებს hello-საც
+// setTimeout(() => {
+//   console.log("Love");
+// }, 5000); //დაელოდება 5 წამი
+
+// console.log("Hello"); // ეს სინქრონული თასქია და აქვს მეტი წონა !!!!!
+/**
+ * სინქრონული კოდი ყოველთვის უპირატესია და სრულდება პირველი
+ * ასინქრონული კოდი call stack-დან გადადის web API-ში და შემდეგ იქიდან ამოცანათა რიგში და
+ * იქ არის იქამდე, სანამ ჯერ სინქრონული კოდი არ შესრულდება call stack-დან
+ */
+
+/**
+ * პირველხარისხოვანია სინქრონული კოდი
+ * მეორეხარისხოვანია მიკროტასკები
+ * მესამეხარისხოვანია მაკროტასკები
+ */
+
+// შეგვიძლია ეს for ციკლიც და საერთოდ ნებისმიერი რამეც გადავიყვანოთ ასინქრონულში, მაგალითად ჩავსვათ setTimeout-ში
+// setTimeout(() => {
+//   for (let i = 0; i < 1000000000; i++) {}
+//   console.log("Bla");
+// }, 1);
+// console.log("Amour"); //იბეჭდება ჯერ Amour და მერე ცოტა ხანში bla
+
+/** !!!!!!!!!!!!!!!!!!!!!1
+ * კარგად გააზრებისთვის დასერჩე what is event loop in javascript
+ */
+
+// let timer = 1;
+// let interval = setInterval(() => {
+//   console.log(timer);
+//   timer++;
+//   if (timer > 3) {
+//     clearInterval(interval);
+//   }
+// }, 1000);
+
+// და-fetch-ვა
+// რეალურად postman-ში send-ისას ეს ხდება, უბრალოდ აქ ხელით დავწერეთ ეს, თუკი დავუშვათ გიჟი ნერდებივართ და
+// Postman-ის ან Bruno-ს ან რამე მსგავსის გამოყენებას აქ ხელით წერა გვირჩევნია
+// async function fetchAPI(url) {
+//   let result = await fetch(url);
+//   let data = await result.json();
+//   console.log(data);
+// }
+// // თუკი პასუხად Pending დააბრუნა, 99% სადმე await გვაკლია
+// fetchAPI("https://jsonplaceholder.typicode.com/users");
+
+// იგივე და-fetch-ვა ოღონდ მამაპაპისეული მეთოდით, ასინქრონულობის გარეშე, then/catch-ით
+function fetchAPI(url) {
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((error) => {
+      console.log("error: ", error);
+    }); //აი მაგალითად ამოაგდო აქ, რადგან url დავაზიანე განზრახ :დ
+}
+
+fetchAPI("https://jsonplaceholder.typicode.c");
