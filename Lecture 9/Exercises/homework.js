@@ -8,7 +8,7 @@ function findAverageOfEvens(arr) {
   return sum / evenNums.length;
 }
 
-console.log(`Average - ${findAverageOfEvens([1, 2, 3, 4, 5, 6, 7, 8])}`);
+console.log(`Average: ${findAverageOfEvens([1, 2, 3, 4, 5, 6, 7, 8])}`);
 
 /**
  * 2) დაწერე ფუნქცია, რომელიც დათვლის სიტყვების რაოდენობას წინადადებაში.
@@ -37,20 +37,58 @@ console.log("Is 91 prime: " + checkPrime(91));
 /**
  * 4) იპოვე ყველაზე გრძელი სიტყვა
  */
-function findLongestWord(words) {}
+function findLongestWord(words) {
+  let longestWord = words.sort((a, b) => b.length - a.length)[0];
+  return longestWord;
+}
+
 let words = ["dog", "elephant", "cat", "hippopotamus"];
+console.log(findLongestWord(words));
 
 /**
  * 5) დააბრუნე ისეთი რიცხვი რომელიც მეორდება უფრო მეტჯერ
  */
+function findMostOccurred() {
+  let frequencyOfNums = arr.reduce((acc, cur) => {
+    acc[cur] = (acc[cur] || 0) + 1;
+    return acc;
+  }, {});
+  // console.log(frequencyOfNums);
+
+  let mostOccurred = Object.keys(frequencyOfNums).sort(
+    (a, b) => frequencyOfNums[b] - frequencyOfNums[a],
+  )[0];
+  return mostOccurred;
+}
+
 let arr = [3, 5, 3, 2, 5, 5, 3, 5];
+console.log(`Most occurred number: ${findMostOccurred(arr)}`);
 
 /**
  * 6) დაწერე ფუქნცია რომელიც დაითვლის რამდენი ლუწი და რამდენი კენტი რიცხვია
  */
+function parityFrequency(nums) {
+  let parityFrequency = numbers.reduce(
+    (acc, cur) => {
+      if (cur % 2 === 0) acc.even++;
+      else acc.odd++;
+      return acc;
+    },
+    { even: 0, odd: 0 },
+  );
+  return parityFrequency;
+}
+
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(parityFrequency(numbers));
 
 /**
  * 7) დაწერე ფუქნცია როემლიც დააბრუენბს ყველაზე პატარა რიცხვს
  */
+function findSmallestNum(nums) {
+  let smallestNum = nums.reduce((acc, cur) => (acc < cur ? acc : cur));
+  return smallestNum;
+}
+
 let nums = [10, 2, 33, 5, 7];
+console.log(findSmallestNum(nums));
