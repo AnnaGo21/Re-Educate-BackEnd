@@ -12,6 +12,10 @@ const subjects = ["Math"];
 subjects.push("Geography");
 
 console.log(subjects); // ორივეს დააკონსოლებს
+/**
+ * ორივეზე (let, const) ვრცელდება hoisting-ი (ანუ js ხედავს შექმნილ ცვლადს),
+ * თუმცა Temporal Dead Zone-ის გამო, ცვლადზე წვდომა მის ინიციალიზამდე არ გვაქვს
+ */
 
 // 2)რა განსხვავებაა primitive და nonprimitive type-ებს შორის?
 /**
@@ -282,11 +286,14 @@ reserve();
  * JavaScript single-threaded (ანუ ერთ ნაკადად) მუშაობს, მაგრამ Event Loop-ის დახმარებით ასინქრონულ ოპერაციებსაც ასრულებს პარალელურ რეჟიმში.
  * სისტემა შედგება 4 ძირითადი ნაწილისგან:
  * Call Stack (ზემოთ განვმარტე)
- * Web APIs - ამუშავებს ასინქრონულ კოდს, როგორიცაა მაგალითად setTimout, fetch
+ * Web APIs - ამუშავებს ასინქრონულ კოდს
  * ის ამოწმებს ცარიელია თუ არა Call Stack
  * Microtask - მაღალი პრიორიტეტის მქონე queue, სადაც ხვდება Promise-ების ატრიბუტები (then, catch) და async/await კოდი.
  * Macrotask - შედარებით დაბალი პრიორიტეტის queue, სადაც ხვდება ტაიმერები (setTimeout)
- * მაგ:
+ *
+ * მაგალითისთვის: setTimeout-ს უშვებს Call Stack, შემდეგ Web API იწყებს ტაიმერის ათვლას, რათა call stack არ დაიბლოკოს,
+ * როცა დრო ამოიწურება, Web API ამ ტაიმერის შიგნით არსებულ ფუნქციას აგზავნის MacroTask-ში და ელოდება თავის რიგს.
+ * შემდეგ კვლავ Event Loop-ი ამოწმებს, რომ ყველაფერი ცარიელია, მაკროტასკიდანაც ამოაქვს ფუნქცია მისი execute-სთვის
  */
 let handleFunction = new Promise((res) => {
   res("resolved");
