@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Jack Sparrow",
+    "age": 30,
+    "email": "jack@gmail.com"
+  },
+  {
+    "name": "Elizabeth Swann",
+    "age": 18,
+    "email": "liz@gmail.com"
+  },
+  {
+    "name": "Will Turner",
+    "age": 20,
+    "email": "will@gmail.com"
+  }
+]
