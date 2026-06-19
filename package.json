@@ -1,0 +1,22 @@
+{
+  "name": "reedu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch homework.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaGo21/Re-Educate-BackEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AnnaGo21/Re-Educate-BackEnd/issues"
+  },
+  "homepage": "https://github.com/AnnaGo21/Re-Educate-BackEnd#readme"
+}
