@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Milk",
+    "description": "1L whole milk",
+    "date": "2026-07-15",
+    "category": "Dairy"
+  },
+  {
+    "id": 2,
+    "name": "Bread",
+    "description": "Whole wheat bread",
+    "date": "2026-06-28",
+    "category": "Bakery"
+  },
+  {
+    "id": 3,
+    "name": "Orange Juice",
+    "description": "100% natural",
+    "date": "2026-09-10",
+    "category": "Beverages"
+  },
+  {
+    "id": 4,
+    "name": "Eggs",
+    "description": "12 organic eggs",
+    "date": "2026-07-05",
+    "category": "Dairy"
+  },
+  {
+    "id": 5,
+    "name": "Rice",
+    "description": "Long grain rice 1kg",
+    "date": "2027-01-20",
+    "category": "Grains"
+  },
+  {
+    "id": 6,
+    "name": "Chicken Breast",
+    "description": "Boneless skinless chicken breast",
+    "date": "2026-07-02",
+    "category": "Meat"
+  },
+  {
+    "id": 8,
+    "name": "Pasta",
+    "description": "Italian spaghetti 500g",
+    "date": "2027-03-10",
+    "category": "Pasta"
+  },
+  {
+    "id": 9,
+    "name": "Orange Juice",
+    "description": "Freshly squeezed orange juice",
+    "date": "2026-06-25",
+    "category": "Beverages"
+  },
+  {
+    "id": 10,
+    "name": "Yogurt",
+    "description": "Greek yogurt 400g",
+    "date": "2026-07-08",
+    "category": "Dairy"
+  },
+  {
+    "id": 11,
+    "name": "cake",
+    "description": "Colorful",
+    "date": "2026-06-28",
+    "category": "Bakery"
+  }
+]
