@@ -74,7 +74,7 @@ const deleteProduct = (req, res) => {
 const updateProduct = (req, res) => {
   const { id } = req.params;
   const { name, price, category, isExpire } = req.body;
-  const index = products.findIndex((p) => p.id === Number(id));
+  const index = products.findIndex((el) => el.id === +id);
 
   if (index === -1) {
     return res.status(404).json({ message: "Not found", data: null });
