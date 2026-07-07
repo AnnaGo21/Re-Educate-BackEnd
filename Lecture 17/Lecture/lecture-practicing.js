@@ -1,0 +1,17 @@
+const express = require("express");
+const apiRouter = require("./api/api");
+
+const app = express();
+const PORT = 3030;
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.json({ message: "Lec17 API is running" });
+});
+
+app.use("/api", apiRouter);
+
+app.listen(PORT, () => {
+  console.log(`server running on http://localhost:${PORT}`);
+});
