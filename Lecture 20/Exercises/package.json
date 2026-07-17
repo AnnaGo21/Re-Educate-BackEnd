@@ -1,0 +1,19 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch --env-file=.env homework.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.18.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.4"
+  }
+}
